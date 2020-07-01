@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align:center;
+    font-size: 1.1em;
+}
+.wrapper {
+    margin: 4%;
+}
+img{
+    width:100%;
+    height: auto;
+}
+h1, h2 {
+    padding: 1em 0;
+}
+p {
+    padding: 1em 0;
+}
+header h2, p{
+    padding-bottom: 0em;
+}
+header h2 {
+    padding-top: 3em;
+}
+header p {
+    padding: 0.5em 0;
+}
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+.align-left{
+    text-align: left;
+}
+.btn {
+    display:inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 1em 2em;
+    margin-top: 1em;
+    border: 3px solid #c1c1c1;
+    box-sizing: content-box;
+}
+.btn:hover{
+    color: #d8d8d8;
+}
+li {
+    list-style: none;
+}
+header {
+    padding-bottom: 1.5em;    
+    min-height: 450px;
+    height:auto;
+}
+header .img-bg {
+    position: absolute;
+    background: url('../images/dentist-dr.jpg');
+    opacity: 0.5;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+    height: 450px;
+    z-index: -1;
+}
+#section-A, #section-B, #section-C {
+    padding: 1.5em 0;
+}
+
+#section-A {
+    background-color: #eaeaea;
+    color: #333;
+    padding-bottom: 0;
+}
+#section-B {
+    padding-bottom: 0em;
+}
+#section-B .card {
+    background-color: #fff;
+    color: #333;
+    padding-bottom: 6em;
+    margin-bottom: 2em;
+    box-sizing: content-box;
+}
+#section-C {
+    padding-top: 0;
+}
+#section-C h2{
+    position: relative;
+}
+#section-C h2::before {
+    content: open-quote;
+    font-size: 1.5em;
+    z-index: -1;
+    color: #ffc46c;
+    
+}
+#section-C h2::after {
+    content: close-quote;
+    font-size: 1.5em;
+    color: #ffc46c;
+    line-height: 1rem;
+    
+}
+#section-C h2 {
+    margin:0;
+    padding-bottom: 0;
+}
+
+#section-D li {
+}
+#section-D li:first-child {
+    background-color: #0a58ce;
+    padding-top: 1em;
+    padding-bottom: 3em;
+}
+
+#section-D li:last-child {
+    padding-top: 1em;
+}
+
+footer {
+    background-color: #eaeaea;
+    color: #333;
+    font-size: 0.8em;
+}
+.test {
+    margin: 0 1em;
+}
+#paypal-button-container {
+
+    text-align: center;
+}
+@media(min-width: 700px) {
+    .grid {
+        display:grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+
+    }
+    .content-wrap {
+        grid-column: 2/4;
+    }
+    .content-wrap-text {
+        columns: 2;
+        column-gap: 3em;
+        padding-bottom: 3em;
+
+    }
+    .content-wrap-text p {
+        padding-top: 0;
+        margin-top: 0;
+    }
+    #section-B ul{
+        justify-content: space-around;
+        display:flex;
+    }
+    #section-B li {
+        width: 31%;
+    }
+    #section-B img {
+    }
+    
+}

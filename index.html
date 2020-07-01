@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/afari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dr. Sarah Zhang</title>
+</head>
+
+<body>
+    <header class="grid">
+        <div class="img-bg"></div>
+        <div class="content-wrap">
+            <h1>Dr. Sarah Zhang's Dentistry</h1>
+            <h2>New patient?</h2>
+            <p>You picked the right dental office</p>
+
+            <a href="#" class="btn">Fill out Form</a>
+        </div>
+        <!--Button needs Link  -->
+    </header>
+    <div id="section-A" class="grid">
+        <div class="content-wrap">
+            <h1>Covid-19 Precautions</h1>
+            <div class="content-wrap-text">
+                <p>When we confirm your appointment, we will ask you some pre-screening questions.
+                    <br><br>These will be repeated when you arrive for your appointment.
+
+                    <br><br>Please call us from your car when you arrive, do not enter the office!
+                    <br>(901) 815-8391
+
+                    <br><br>We will ask the prescreening questions again and let you know when you should enter the
+                    office.
+                    You will need to wear a mask or face covering when you enter the office.</p>
+
+                <p>You will have your temperature taken, please do not leave the waiting room until this is done.
+
+                    Only patients receiving treatment should enter the office unless the patient requires a care giver
+                    or a parent. Friends and family will need to stay in the car.
+
+                    <br><br>Please limit the items you bring into the office as we will ask you to leave them on your
+                    lap during your cleaning.
+
+                    <br><br>Many of these steps are taken to increase social distancing to ensure the health of our
+                    patients and staff.
+
+                    <br><br>Please give us a call to set up your appointment! <br>(901) 815-8391</p>
+
+                <br>
+                <p class="align-left">Dr. Sarah Zhang DMD</p>
+            </div>
+        </div>
+    </div>
+    <div id="section-B">
+        <ul>
+            <a class = "card" href="#">
+                <li>
+                    <img src="../images/smiling-woman.jpg" alt="shining white teeth">
+                    <h3>Whitening Teeth</h3>
+                    <p>Starting the day with a new Smile at low as $125!</p>
+                </a>
+            </li>
+            <a class = "card" href="#">
+                <li>
+                    <img class="change-aspect-ratio" src="../images/braces-girl-3x2.jpeg" alt="girl with brace  smiling">
+                    <h3>Braces</h3>
+                    <p>Never too late to straighten your teeth</p>
+                </a>
+            </li>
+            <a class = "card" href="#">
+                <li>
+                    <img src="../images/dentist-kid.jpg" alt="teeth clean for a kid">
+                    <h3>For Kids</h3>
+                    <p>Starting early to build healthy habits</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div id="section-C" class="wrapper">
+        <h1>What people have said</h1>
+        <ul class="quote">
+            <li class="quote-flexbox">
+                <h2>My Teeth have never felt so clean! Dr. Walters made sure I was comfortable!</h2>
+                <p>- Robert Willson</p>
+            </li>
+            <li class="quote-flexbox">
+                <h2>Dr. Walters always treats me with personal care!</h2>
+                <p>- Albert Smith</p>
+            </li>
+            <li class="quote-flexbox">
+                <h2>The receptionist are so friendly and kind.</h2>
+                <p>- Jack Xao</p>
+            </li>
+        </ul>
+    </div>
+    <div id="section-D">
+        <ul>
+            <li>
+                <h2>Payment</h2>
+                <div class="test">
+                    <div id="paypal-button-container"></div>
+                    <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
+                        data-sdk-integration-source="button-factory"></script>
+                    <script>
+                        paypal.Buttons({
+                            style: {
+                                shape: 'rect',
+                                color: 'silver',
+                                layout: 'vertical',
+                                label: 'paypal',
+
+                            },
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '1'
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                });
+                            }
+                        }).render('#paypal-button-container');
+                    </script>
+                </div>
+            </li>
+            <li>
+                <h2>Like us on facebook</h2>
+                <iframe
+                    src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2Fcategory%2FMedical-Service%2FDr-Sydney-Walters-DMD-322667444752%2F&width=100&layout=button_count&action=like&size=large&share=true&height=46&appId"
+                    title="Facebook Like button for Dr. Walters" width="92" height="46"
+                    style="border:none;overflow:hidden;padding-bottom: 2em;" scrolling="no" frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <p>Rights and Reserve Dr. Sarah Zhang&copy</p>
+    </footer>
+</body>
+
+</html>
