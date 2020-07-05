@@ -57,14 +57,14 @@ function clickBoard(squareId) {
         
         player1Turn =!player1Turn;
         if (checkWin(player1)) {
-            document.getElementById('player1Score').innerText = player1.score + 1;
+            document.getElementById('player1Score').innerText = ++player1.score;
             let endGame = document.querySelector("#end-game"); 
             endGame.style.display ="grid";
             endGame.innerText = "Player 1 has Won!";
             
         }
         else if (checkWin(player2)) {
-            document.getElementById('player2Score').innerText = player2.score++;
+            document.getElementById('player2Score').innerText = ++player2.score;
             let endGame = document.querySelector("#end-game"); 
             endGame.style.display ="grid";
             endGame.innerText = "Player 2 has Won!";
