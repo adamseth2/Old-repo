@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="./css/style.css">
     
     <title>Portfolio Page</title>
+    
     <script defer src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+    
     <script defer src="./javascript/script.js"></script>
 </head>
 <body>
@@ -40,27 +45,30 @@
     </div>
     <!-- Maybe add a button -->
     <span id ="anchor-B"></span>
-    <div id="section-B">
+    <div id="section-B"> 
         <h1>Hi my name is Adam</h1>
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellat, deserunt mollitia exercitationem corporis quod. Lorem ipsum dolor sit amet.</p>
+        <img src="./photos/man-standing-next-to-code.svg" alt="Man next to words">
+        <div class="container-A">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, voluptas?</p>
         </div>
-        <div class="container">
+        <div class="container-B">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum repellat, deserunt mollitia exercitationem corporis quod. Lorem ipsum dolor sit amet.</p>
+            <img src="./photos/guy-in-suit.svg" alt="guy in suit">
         </div>
-        <div class="container">
+        <div class="container-C">
             <h2>Skills</h2>
             <ul>
                 <li>Javascript ES6</li>
                 <li>React.JS</li>
-                <li>Sass, CSS and HTML</li>
+                <li>HTML, Sass and CSS</li>
                 <li>Java</li>
-                <li>4 years of experince with Adobe Photoshop and Illustrator</li>
+                <li>4 years of experience with Adobe Photoshop and Illustrator</li>
             </ul>
         </div>
     </div>
     <span id ="anchor-C"></span>
     <div  id="section-C">
+        <h1>Projects</h1>
         <div class="grid">
             <div class="card">
                 <div class="temp-space"></div>
@@ -69,9 +77,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti et mollitia magni magnam cupiditate nemo?</p>
                     <div class="card-grid">
                         <a href="" class="view-project">
-                            <i class="fas fa-desktop fa-2x icon-cust"></i>View Project</a>
-                        <a href="" class="github">
-                        <i class="fab fa-github fa-2x icon-cust"></i>View Code</a>
+                            <i class="fas fa-desktop fa-2x icon-desktop"></i>View Project</a>
+                        <a href="" class="view-code">
+                        <i class="fab fa-github fa-2x icon-github"></i>View Code</a>
                     </div>
                 </div>
             </div>
@@ -82,9 +90,9 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti et mollitia magni magnam cupiditate nemo?</p>
                     <div class="card-grid">
                         <a href="" class="view-project">
-                            <i class="fas fa-desktop fa-2x icon-cust"></i>View Project</a>
-                        <a href="" class="github">
-                        <i class="fab fa-github fa-2x icon-cust"></i>View Code</a>
+                            <i class="fas fa-desktop fa-2x icon-desktop"></i>View Project</a>
+                        <a href="" class="view-code">
+                        <i class="fab fa-github fa-2x icon-github"></i>View Code</a>
                     </div>
                 </div>
             </div>
@@ -95,18 +103,30 @@
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti et mollitia magni magnam cupiditate nemo?</p>
                     <div class="card-grid">
                         <a href="" class="view-project">
-                            <i class="fas fa-desktop fa-2x icon-cust"></i>View Project</a>
-                        <a href="" class="github">
-                        <i class="fab fa-github fa-2x icon-cust"></i>View Code</a>
+                            <i class="fas fa-desktop fa-2x icon-desktop"></i>View Project</a>
+                        <a href="" class="view-code">
+                        <i class="fab fa-github fa-2x icon-github"></i>View Code</a>
                     </div>
                 </div>
             </div>
-                
+            <div class="card">
+                <div class="temp-space"></div>
+                <div class="card-caption">
+                    <h2>Dentistry Launch Page</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti et mollitia magni magnam cupiditate nemo?</p>
+                    <div class="card-grid">
+                        <a href="" class="view-project">
+                            <i class="fas fa-desktop fa-2x icon-desktop"></i>View Project</a>
+                        <a href="" class="view-code">
+                        <i class="fab fa-github fa-2x icon-github"></i>View Code</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <span id="anchor-D"></span>
     <div id="section-D">
-        <div class="s-D-title">
+        <div id="s-D-title">
             <h1>Contact Me</h1>
             <p>Let's work together</p>
         </div>
@@ -115,11 +135,11 @@
             <div></div>
             
             <div class="input-container">
-                <input id = "full-name" name ="full-name" type="text" required>
+                <input id = "full-name" name ="full-name" type="text" required autocomplete="off">
                 <label for="full-name">Full name</label>
             </div>
             <div class="input-container">
-                <input id = "email-address"type="text" required>
+                <input id = "email-address" name ="email-address" type="text" required  autocomplete="off">
                 <label for="email-address">Email address</label>
             </div>
 
@@ -129,10 +149,22 @@
         <input id = "message" class = "big-box" type="textarea" placeholder="Enter Message">
         <input id = "submit" type="submit"> -->
         <div>
-            <div></div>
-            <textarea name="" id="" cols="100%" rows="10" placeholder="Enter message"></textarea>
+            <textarea name="" id="" cols="20000%" rows="10" placeholder="Enter message"></textarea>
         </div>
 
     </div>
+    <footer>
+        <div class="footer-grid">
+            <p>Copyright ©2020 All rights reserved</p>
+            <div id="social-media-container">
+                <a href="https://linkedin.com/in/adam-chhor-02ab4b1b2">
+                    <i class="fab fa-linkedin fa-2x icon-cust"></i>
+                </a>
+                <a href="https://github.com/adamseth2">
+                    <i class="fab fa-github fa-2x icon-cust"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -14,6 +14,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #f3f3f3;
+}
+
 h1 {
   font-size: 2.2rem;
 }
@@ -46,14 +50,16 @@ nav {
       flex-wrap: wrap;
   top: 0;
   z-index: 10000;
+  -webkit-box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.3);
 }
 
-nav a {
+nav a, nav #section-C .card .card-caption .view-code, #section-C .card .card-caption nav .view-code {
   padding: 0.2rem 0.5rem;
   color: #000000;
 }
 
-nav a:hover {
+nav a:hover, nav #section-C .card .card-caption .view-code:hover, #section-C .card .card-caption nav .view-code:hover {
   color: #111111;
 }
 
@@ -84,18 +90,23 @@ nav #nav-pop-up {
   padding-bottom: 1.5em;
   -webkit-animation-name: expand-hamburger;
           animation-name: expand-hamburger;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
-nav #nav-pop-up a {
-  display: block;
+nav #nav-pop-up a, nav #nav-pop-up #section-C .card .card-caption .view-code, #section-C .card .card-caption nav #nav-pop-up .view-code {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  text-align: center;
   color: white;
   line-height: 2;
   display: table;
 }
 
 nav #nav-pop-up #arrow-close {
+  margin-top: 1em;
   cursor: hover;
 }
 
@@ -103,10 +114,16 @@ nav #nav-pop-up #arrow-close::before,
 nav #nav-pop-up #arrow-close::after {
   content: '';
   padding: 3px 10px;
-  background-color: #666;
+  background-color: #999;
   position: absolute;
   left: 50%;
   cursor: pointer;
+}
+
+nav #nav-pop-up #arrow-close:hover::before,
+nav #nav-pop-up #arrow-close:hover::after {
+  background-color: white;
+  color: white;
 }
 
 nav #nav-pop-up #arrow-close::before {
@@ -168,6 +185,8 @@ nav #nav-pop-up #arrow-close::after {
           animation-name: top-to-down;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
   padding-top: 3em;
   padding-bottom: 0.5em;
 }
@@ -178,11 +197,324 @@ nav #nav-pop-up #arrow-close::after {
           animation-name: left-to-right;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   opacity: 0;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+#section-B {
+  padding-top: 5em;
+  background-color: white;
+}
+
+#section-B img {
+  margin-top: 3em;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+  width: 70%;
+}
+
+#section-B h1, #section-B h2, #section-B p {
+  text-align: center;
+  opacity: 0;
+}
+
+#section-B h1, #section-B h2 {
+  padding-bottom: 1.5rem;
+}
+
+#section-B .container-A,
+#section-B .container-B,
+#section-B .container-C {
+  padding: 3em 1.5em 4em 1.5em;
+}
+
+#section-B .container-B {
+  background-color: #999;
+  color: white;
+}
+
+#section-B .container-B img {
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+  width: 40%;
+}
+
+#section-B .container-C {
+  background-color: #111;
+  color: white;
+}
+
+#section-B ul {
+  padding-left: 1.2em;
+  font-size: 1.3em;
+}
+
+#section-B .hyphenBulletPoint::before {
+  content: '-';
+  padding-right: 1ch;
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1;
+}
+
+#section-C h1 {
+  text-align: center;
+  margin: 3em 0;
+}
+
+#section-C .card:first-child {
+  margin-top: 0;
+}
+
+#section-C .card {
+  margin: 5em 0.5em;
+  color: white;
+}
+
+#section-C .card .temp-space {
+  width: 100%;
+  padding: 7em 0;
+  background-color: white;
+}
+
+#section-C .card .card-caption {
+  border-top: #111 solid 3px;
+  background-color: #999;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+#section-C .card .card-caption h2 {
+  background-color: #111;
+  padding: 0.25em 0;
+}
+
+#section-C .card .card-caption p {
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+#section-C .card .card-caption .card-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#section-C .card .card-caption a, #section-C .card .card-caption .view-code {
+  margin-top: 1em;
+  display: inline-block;
+  color: white;
+  padding: 1em 0.5em 1em 3em;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+#section-C .card .card-caption .view-code {
+  padding-left: 3em;
+}
+
+#section-C .card .card-caption a:hover, #section-C .card .card-caption .view-code:hover {
+  background-color: white;
+  color: #111;
+}
+
+#section-C .card .card-caption .icon-cust, #section-C .card .card-caption .icon-github, #section-C .card .card-caption .icon-desktop {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  position: absolute;
+  left: 0.2em;
+  bottom: 0.4em;
+}
+
+#section-C .card .card-caption .icon-github {
+  left: 0.3em;
+}
+
+#section-D {
+  margin: 10em 0.5em 8em 0.5em;
+}
+
+#section-D #s-D-title {
+  background-color: #f3f3f3;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  text-align: center;
+}
+
+#section-D #s-D-title h1, #section-D #s-D-title p {
+  text-align: center;
+}
+
+#section-D img {
+  width: 100%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#section-D .wrapper {
+  margin-top: 1em;
+}
+
+#section-D input {
+  background-color: transparent;
+}
+
+#section-D input[type=text] {
+  border-bottom: #111 solid 2px;
+  padding: 1em 0 0.1em 0.5em;
+  margin-bottom: 2em;
+  display: block;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+#section-D .input-container {
+  position: relative;
+}
+
+#section-D label {
+  position: absolute;
+  top: 0.7em;
+  left: 0.45rem;
+  cursor: text;
+  font-size: 1.3rem;
+  color: #8e8e8e;
+}
+
+#section-D input:focus + label,
+#section-D input:valid + label {
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  font-size: 1rem;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  color: #111;
+  font-weight: bold;
+}
+
+#section-D textarea {
+  border: #111 solid 2px;
+  margin-top: 1em;
+  resize: none;
+  max-width: 100%;
+  padding: 0.75em 1em;
+  margin-bottom: 5em;
+}
+
+footer {
+  background-color: #999;
+  color: white;
+  padding: 30vh 1em;
+  text-align: center;
+}
+
+footer #social-media-container {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f3f3f3;
+}
+
+footer #social-media-container .icon-cust, footer #social-media-container #section-C .card .card-caption .icon-github, #section-C .card .card-caption footer #social-media-container .icon-github, footer #social-media-container #section-C .card .card-caption .icon-desktop, #section-C .card .card-caption footer #social-media-container .icon-desktop {
+  color: white;
+  margin: 0 0.5em;
+}
+
+@media (min-width: 700px) {
+  #s-B-card {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr minmax(5fr, 500px) 1fr;
+        grid-template-columns: 1fr minmax(5fr, 500px) 1fr;
+  }
+  #section-B {
+    -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 10px rgba(0, 0, 0, 0.3);
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 7%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1.3fr 1fr;
+        grid-template-columns: 1.3fr 1fr;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    padding: 0;
+    opacity: 0;
+  }
+  #section-B .container-A {
+    margin: 0;
+    margin-top: 12em;
+    padding-bottom: 5vw;
+    margin-left: -40px;
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #section-B .container-B img {
+    -webkit-transform: translateX(40%);
+            transform: translateX(40%);
+    width: 60%;
+  }
+  #section-B h1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    padding: 0;
+    margin: 0;
+  }
+  #section-C .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    margin: 0 10%;
+  }
+  #section-C .grid .card {
+    -webkit-transition: ease-out 0.5s;
+    transition: ease-out 0.5s;
+    margin: 1em;
+    -webkit-box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+  }
+  #section-C .grid .card:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.4);
+  }
+  #section-D {
+    margin: 0 20%;
+  }
+  #section-D img {
+    width: 40%;
+    -webkit-transform: translateX(80%);
+            transform: translateX(80%);
+  }
 }
 
 @-webkit-keyframes top-to-down {
@@ -229,171 +561,24 @@ nav #nav-pop-up #arrow-close::after {
   }
 }
 
-#section-B {
-  padding-top: 5em;
-  background-color: white;
+@-webkit-keyframes bottom-to-top {
+  0% {
+    top: -30px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
 }
 
-#section-B h1, #section-B h2, #section-B p {
-  text-align: center;
-}
-
-#section-B h1, #section-B h2 {
-  padding-bottom: 1.5rem;
-}
-
-#section-B .container {
-  padding: 3em 1.5em 4em 1.5em;
-}
-
-#section-B .container:nth-child(3) {
-  background-color: #666;
-  color: white;
-}
-
-#section-B .container:last-child {
-  background-color: #111;
-  color: white;
-}
-
-#section-B ul {
-  padding-left: 1.2em;
-  font-size: 1.3em;
-}
-
-#section-B .hyphenBulletPoint::before {
-  content: '-';
-  padding-right: 1ch;
-  font-weight: bold;
-  font-size: 1.5em;
-  line-height: 1;
-}
-
-#section-C .card {
-  margin: 4em 0.5em;
-  padding: 3em 0 0 0;
-  border: #111 solid 3px;
-  color: white;
-}
-
-#section-C .card .temp-space {
-  width: 100%;
-  padding: 9em 0;
-}
-
-#section-C .card .card-caption {
-  border-top: #111 solid 3px;
-  background-color: #666;
-  padding-bottom: 1em;
-  text-align: center;
-}
-
-#section-C .card .card-caption h2 {
-  background-color: #111;
-  padding: 0.25em 0;
-}
-
-#section-C .card .card-caption p {
-  padding-top: 1em;
-}
-
-#section-C .card .card-caption .card-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-#section-C .card .card-caption a {
-  margin-top: 1em;
-  display: inline-block;
-  color: white;
-  padding: 1em 0.5em 1em 3em;
-  border: solid white 2px;
-  position: relative;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  font-weight: bold;
-}
-
-#section-C .card .card-caption a:hover {
-  background-color: white;
-  color: #111;
-}
-
-#section-C .card .card-caption .icon-cust {
-  position: absolute;
-  left: 0.2em;
-  bottom: 0.4em;
-}
-
-#section-D {
-  margin: 10em 0.25em 0 0.25em;
-}
-
-#section-D .s-D-title {
-  background-color: #f3f3f3;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  margin-bottom: 3em;
-}
-
-#section-D .s-D-title h1, #section-D .s-D-title p {
-  text-align: center;
-}
-
-#section-D img {
-  width: 100%;
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-}
-
-#section-D .wrapper {
-  margin-top: 1em;
-}
-
-#section-D input[type=text] {
-  border-bottom: #111 solid 2px;
-  padding: 1em 0 0.1em 0.5em;
-  margin-bottom: 2em;
-  display: block;
-  width: 100%;
-  font-size: 1.1rem;
-}
-
-#section-D .input-container {
-  position: relative;
-}
-
-#section-D label {
-  position: absolute;
-  top: 0.7em;
-  left: 0.45rem;
-  cursor: text;
-  font-size: 1.3rem;
-  color: #8e8e8e;
-}
-
-#section-D input:focus + label,
-#section-D input:valid + label {
-  -webkit-transform: translateY(-70%);
-          transform: translateY(-70%);
-  font-size: 1rem;
-  -webkit-transition: 0.3s ease-in;
-  transition: 0.3s ease-in;
-  color: #111;
-  font-weight: bold;
-}
-
-#section-D textarea {
-  border: #111 solid 2px;
-  margin-top: 1em;
-  resize: none;
-  max-width: 100%;
-  padding: 0.75em 1em;
+@keyframes bottom-to-top {
+  0% {
+    top: -30px;
+    opacity: 0.3;
+  }
+  100% {
+    top: 0px;
+    opacity: 1;
+  }
 }
